@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title></title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet" href="estilos.css">
+   
+</head>  
+<body>
+    <form class="formulario" id="login-form">
+    
+    <h1>Log In</h1>
+     <div class="contenedor">        
+         <div class="input-contenedor">
+         <i class="fas fa-user icon"></i>
+         <input type="text" name="username" id="username-field" placeholder="Username">
+         </div>
+         <div class="input-contenedor">
+        <i class="fas fa-key icon"></i>
+        <input type="password" type="password" name="password" placeholder="Password">  
+         </div>
+         <input type="submit" value="Login" class="button" name="btnVerifivaca" id="login-form-submit" onclick="validar()">
+     </div>
+    </form>
+
+    <script src="js/main.js"></script>
+	<script>
+        const loginForm = document.getElementById("login-form");
+        const loginButton = document.getElementById("login-form-submit");
+
+        loginButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            const user = loginForm.username.value;
+            const pass = loginForm.password.value;
+
+            if(user === "alejo" && pass === "web" )
+            {
+				window.location="loading.html";
+            }
+            else
+            {
+                alert("Qué te pasa viejo, estás viendo netflix o qué?")
+            }
+
+        });
+    </script>
+</body>
+</html>
